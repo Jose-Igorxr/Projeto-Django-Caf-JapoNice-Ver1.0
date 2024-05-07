@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Imbue:opsz,wght@10..100,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="Assets/icons/images (1).ico">
+    <link href="https://fonts.cdnfonts.com/css/england-hand-db" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app_cafe/css/style_criar.css' %}">
+    <title>Criar Produto</title>
+</head>
+<body>
+ <nav>
+        <a href="#" class="logo">
+            <h1>
+                <div>
+                    <span class="cafeteria">CaféJapo</span><i class="xy">Nice</i>
+                </div>
+            </h1>
+        </a>
+
+        <img id="japones" src="{% static 'app_cafe/images/Novo_Projeto_16.png' %}" alt="" height="90" width="700">
+
+        <ul>
+            <li class="nav-item">
+            <a href="{% url 'lista_produtos' %}" class="nav-link" id="nav-link" font-size="100px">Menu</a>
+            </li>
+            <li class="nav-item">
+             <a href="{% url 'localizacao' %}" class="nav-link" id="nav-link">Localização</a>
+            </li>
+            <li class="nav-item">
+            <a href="{% url 'index' %}" class="nav-link" id="nav-link">Início</a>
+            </li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <h1 class="menu_texto">Criar Novo Produto</h1>
+    <form class="formulario" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+
+<footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2 class="logo-text">
+                    <div>
+                        <span class="cafeteria">CaféJapo</span><i class="xy">Nice</i>
+                    </div>
+                </h2>
+                <p>
+                    Uma fusão única entre a cultura japonesa e o sabor do café. Venha experimentar uma experiência gastronômica inesquecível.
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> (XX) XXXX-XXXX</span>
+                    <span><i class="fas fa-envelope"></i> info@cafejaponice.com</span>
+                </div>
+                <div class="socials">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Links Rápidos</h2>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#Localização">Localização</a></li>
+                    <li><a href="#novidades">Novidades</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-form">
+                <h2>Fale Conosco</h2>
+                <form action="#" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Seu email...">
+                    <textarea rows="4" name="message" class="text-input contact-input" placeholder="Sua mensagem..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; CaféJapoNice | Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+</html>

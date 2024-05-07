@@ -1,0 +1,261 @@
+:root {
+    --normal-font: 400;
+    --bold-font: 600;
+    --bolder-font: 900;
+    --primary-color: #3d2609;
+    --secondary-color: #222024;
+    --line-height: 1.7rem;
+    --transition: 0.4s ease-in;
+   }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+   }
+
+html {
+    scroll-behavior: smooth;
+}
+.display {
+    border-color: black;
+    background-color: #c0ac99;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    font-family: "Roboto", sans-serf;
+    background-color: #dac8b3;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.cafeteria {
+    color: var(--primary-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.xy {
+    color: var(--secondary-color);
+    font-family: 'England Hand DB', sans-serif;
+}
+
+nav {
+    background: #dac8b3;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #dac8b3;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight : 500;
+}
+
+ul {
+    display: flex;
+    justify-content : space-between ;
+    align-items : center;
+}
+
+.nav-item {
+    margin-left : 2rem;
+}
+
+.nav-link {
+    font-weight : var(--bold-font);
+}
+
+.hamburger {
+    display: none;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+  
+.carousel {
+    display: flex;
+    animation: carousel-scroll 30s linear infinite;
+}
+  
+.carousel img {
+    width: 30%;
+    height: auto;
+}
+  
+@keyframes carousel-scroll {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(-100%);
+}
+  }
+
+.sobre {
+    padding-left: 120px;
+    padding-top: 80px;
+
+}
+
+.titulo {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+.titulo-2 {
+    color: var(--primary-color);
+    font-size: 25px;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.frase {
+    padding-top: 10px;
+    font-size: 20px;
+    margin-right: 30%;
+}
+
+.imagem_cafeteria {
+    border-radius: 10px;
+    margin-left: 80%;
+    margin-top: 50px;
+}
+
+.organizar_tamanho {
+    display: inline-block;
+}
+
+#texto_menu {
+    padding-top: 5px;
+    padding-left: 1033px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nossa_cafeteria {
+    padding-left: 120px;
+    padding-top: 80px
+}
+
+#nossa_cafeteria {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+@import url('https://fonts.cdnfonts.com/css/england-hand-db');
+
+
+footer {
+    background-color: #504b4bbd;
+    color: #fff;
+    padding: 50px 0;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+    max-width: 300px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ccc;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ccc;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
+
+
+
+
+
+
